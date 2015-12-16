@@ -2693,6 +2693,10 @@ $(document).ready(function(){
     var text_area_selector = '.materialize-textarea';
 
     function textareaAutoResize($textarea) {
+      if (!document.contains(hiddenDiv[0])) {
+        $('body').append(hiddenDiv);
+      }
+      
       // Set font properties of hiddenDiv
 
       var fontFamily = $textarea.css('font-family');
